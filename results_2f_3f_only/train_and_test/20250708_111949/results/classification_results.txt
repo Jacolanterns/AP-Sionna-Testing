@@ -1,0 +1,439 @@
+Accuracy: 1.00
+
+Classification Report:
+
+Class: 0
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 1
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 2
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 112.00
+
+Class: 3
+  precision: 0.99
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 4
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 5
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 6
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 7
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 8
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 9
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 10
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 11
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 12
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 13
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 14
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 15
+  precision: 0.99
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 16
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 17
+  precision: 1.00
+  recall: 0.99
+  f1-score: 1.00
+  support: 113.00
+
+Class: 18
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 19
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 20
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 21
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 22
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 23
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 24
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 112.00
+
+Class: 25
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 26
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 27
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 112.00
+
+Class: 28
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 29
+  precision: 1.00
+  recall: 0.99
+  f1-score: 1.00
+  support: 113.00
+
+Class: 30
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 31
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 32
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 33
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 112.00
+
+Class: 34
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 35
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 112.00
+
+Class: 36
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 37
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 38
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 39
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 112.00
+
+Class: 40
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 112.00
+
+Class: 41
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 112.00
+
+Class: 42
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 43
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 44
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 112.00
+
+Class: 45
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 46
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 47
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 48
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 112.00
+
+Class: 49
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 50
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 112.00
+
+Class: 51
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 52
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 53
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 112.00
+
+Class: 54
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 55
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 56
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 57
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 58
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+Class: 59
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 113.00
+
+accuracy: 1.00
+
+Class: macro avg
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 6768.00
+
+Class: weighted avg
+  precision: 1.00
+  recall: 1.00
+  f1-score: 1.00
+  support: 6768.00
+
+Class distribution in test set:
+  D1_2F_AP01: 113
+  D1_2F_AP02: 113
+  D1_2F_AP03: 112
+  D1_2F_AP04: 113
+  D1_2F_AP05: 113
+  D1_2F_AP06: 113
+  D1_2F_AP07: 113
+  D1_2F_AP08: 113
+  D1_2F_AP09: 113
+  D1_2F_AP10: 113
+  D1_2F_AP11: 113
+  D1_2F_AP12: 113
+  D1_2F_AP13: 113
+  D1_2F_AP14: 113
+  D1_2F_AP15: 113
+  D1_2F_AP16: 113
+  D1_2F_AP17: 113
+  D1_2F_AP18: 113
+  D1_2F_AP19: 113
+  D1_2F_AP20: 113
+  D1_2F_AP21: 113
+  D1_2F_AP22: 113
+  D1_2F_AP23: 113
+  D1_2F_AP24: 113
+  D1_2F_AP25: 112
+  D1_2F_AP26: 113
+  D1_3F_AP01: 113
+  D1_3F_AP02: 112
+  D1_3F_AP03: 113
+  D1_3F_AP04: 113
+  D1_3F_AP05: 113
+  D1_3F_AP06: 113
+  D1_3F_AP07: 113
+  D1_3F_AP08: 112
+  D1_3F_AP09: 113
+  D1_3F_AP10: 112
+  D1_3F_AP11: 113
+  D1_3F_AP12: 113
+  D1_3F_AP13: 113
+  D1_3F_AP14: 112
+  D1_3F_AP15: 112
+  D1_3F_AP16: 112
+  D1_3F_AP17: 113
+  D1_3F_AP18: 113
+  D1_3F_AP19: 112
+  D1_3F_AP20: 113
+  D1_3F_AP21: 113
+  D1_3F_AP22: 113
+  D1_3F_AP23: 112
+  D1_3F_AP24: 113
+  D1_3F_AP25: 112
+  D1_3F_AP26: 113
+  D1_3F_AP27: 113
+  D1_3F_AP28: 112
+  D1_3F_AP29: 113
+  D1_3F_AP30: 113
+  D1_3F_AP31: 113
+  D1_3F_AP32: 113
+  D1_3F_AP33: 113
+  D1_3F_AP34: 113
