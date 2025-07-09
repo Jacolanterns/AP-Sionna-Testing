@@ -60,10 +60,23 @@ def load_transmitters(filename):
     transmitters = []
     with open(filename, "r") as file:
         csv_reader = csv.reader(file)
-        for row in csv_reader:
-            name = row[0]
-            x, y, z = map(float, row[1:])
+        # Skip header row if it exists (check if first column contains 'x' or similar)
+        first_row = next(csv_reader)
+        if first_row[0].lower() in ['x', 'object', 'name'] or not first_row[1].replace('.', '').replace('-', '').isdigit():
+            # This is a header row, skip it
+            print(f"Skipping header row: {first_row}")
+        else:
+            # This is data, process it
+            name = first_row[0]
+            x, y, z = map(float, first_row[1:4])  # Take only first 3 coordinates
             transmitters.append((name, [x, y, z]))
+        
+        # Process remaining rows
+        for row in csv_reader:
+            if len(row) >= 4:  # Ensure we have enough columns
+                name = row[0]
+                x, y, z = map(float, row[1:4])  # Take only first 3 coordinates
+                transmitters.append((name, [x, y, z]))
     return transmitters
 
 def imshow(self, metric="path_gain", scale_factor=10):

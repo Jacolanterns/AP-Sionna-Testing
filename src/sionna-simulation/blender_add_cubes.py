@@ -72,12 +72,26 @@ def get_ground_min_max():
 
     Raises
     ------
-    AttributeError
-        If the "Ground" object is not found in the scene.
+    None
+        Uses default bounds if no ground object is found in the scene.
     """
-    ground = bpy.data.objects.get("Ground")
+    # Print all available objects for debugging
+    print("Available objects:", [obj.name for obj in bpy.data.objects])
+    
+    # Look for ground objects with different possible names
+    ground = None
+    ground_names = ["Ground", "Ground_002", "Ground_003", "Ground_004", "ground", "floor", "Floor"]
+    
+    for name in ground_names:
+        ground = bpy.data.objects.get(name)
+        if ground:
+            print(f"Found ground object: {name}")
+            break
+    
     if not ground:
-        raise AttributeError("Ground object not found in the scene.")
+        print("No ground object found, using default bounds for 2F scene")
+        # Use default room bounds based on typical 2F floor dimensions
+        return Vector((-50, -50, 0)), Vector((50, 50, 3))
     
     bbox_corners = [ground.matrix_world @ Vector(corner) for corner in ground.bound_box]
     min_pos = Vector((min(v.x for v in bbox_corners), min(v.y for v in bbox_corners), min(v.z for v in bbox_corners)))

@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scene version="2.1.0">
+
+
+
+
+
+
+	<integrator type="path" id="elm__0" name="elm__0">
+		<integer name="max_depth" value="12" />
+	</integrator>
+
+
+
+	<bsdf type="diffuse" id="mat-itu_concrete" name="mat-itu_concrete">
+		<rgb value="0.803020 0.218669 0.312103" name="reflectance" />
+	</bsdf>
+	<bsdf type="twosided" id="mat-itu_metal" name="mat-itu_metal">
+		<bsdf type="principled" name="bsdf">
+			<rgb value="0.802544 0.680376 0.000000" name="base_color" />
+			<float name="spec_tint" value="0.000000" />
+			<float name="spec_trans" value="0.000000" />
+			<float name="metallic" value="0.000000" />
+			<float name="anisotropic" value="0.000000" />
+			<float name="roughness" value="0.250000" />
+			<float name="sheen" value="0.000000" />
+			<float name="sheen_tint" value="0.500000" />
+			<float name="clearcoat" value="0.000000" />
+			<float name="clearcoat_gloss" value="0.000900" />
+			<float name="specular" value="0.500000" />
+		</bsdf>
+	</bsdf>
+	<bsdf type="diffuse" id="mat-itu_marble" name="mat-itu_marble">
+		<rgb value="0.662829 0.418078 0.806825" name="reflectance" />
+	</bsdf>
+
+
+
+	<emitter type="constant" id="elm__1" name="elm__1">
+		<rgb value="1.000000 1.000000 1.000000" name="radiance" />
+	</emitter>
+
+
+
+	<shape type="ply" id="Ground_004" name="Ground_004">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Ground_004.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_concrete" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Ground_002" name="Ground_002">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Ground_002.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Ground_003" name="Ground_003">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Ground_003.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_marble" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_0" name="Cube_0">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_0.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_1" name="Cube_1">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_1.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_2" name="Cube_2">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_2.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_3" name="Cube_3">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_3.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_4" name="Cube_4">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_4.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_5" name="Cube_5">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_5.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_6" name="Cube_6">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_6.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_7" name="Cube_7">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_7.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_8" name="Cube_8">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_8.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_9" name="Cube_9">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_9.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_10" name="Cube_10">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_10.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_11" name="Cube_11">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_11.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_12" name="Cube_12">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_12.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_13" name="Cube_13">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_13.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+	<shape type="ply" id="Cube_14" name="Cube_14">
+		<transform name="to_world"><rotate x="1" angle="90" /><rotate y="1" angle="0" /><rotate z="1" angle="-90" /><translate value="0 0 0" /></transform><string name="filename" value="meshes/Cube_14.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="mat-itu_metal" name="bsdf" />
+	</shape>
+
+
+
+</scene>

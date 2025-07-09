@@ -25,17 +25,20 @@ import csv
 
 import xml.etree.ElementTree as ET
 
-# Define root and file paths
-ROOT = "/home/center/Documents/teep"
 
+# Define root and file paths - UPDATED FOR YOUR PROJECT
+ROOT = "/home/sionna/Documents/GitTest2/AP-Sionna-Testing"
+
+# Updated file paths to match project structure
 BLEND_FILE_PATH = os.path.join(ROOT, "data/blender/2F_no_solid.blend")
-TRANSMITTER_FILE = os.path.join(ROOT, "transformed_data.csv")
+TRANSMITTER_FILE = os.path.join(ROOT, "src/sionna/data/transformed_data.csv")  # Updated location
 MITSUBA_FILE_PATH = os.path.join(ROOT, "data/blender/2F_no_solid.xml")
 OUTPUT_BLEND_PATH = os.path.join(ROOT, "output_scene.blend")
 OUTPUT_MITSUBA_PATH = os.path.join(ROOT, "output_scene.xml")
 OUTPUT_BLEND_PATH_3D = os.path.join(ROOT, "output_scene_with_3d_mesh.blend")
 OUTPUT_USD_PATH_3D = os.path.join(ROOT, "output_scene_with_3d_mesh.usdc")
 OUTPUT_GLB_PATH_3D = os.path.join(ROOT, "output_scene_with_3d_mesh.glb")
+
 
 parser = argparse.ArgumentParser(description="Generate a simulation step.")
 parser.add_argument('--num_cubes', type=int, default=10, help='Number of cubes to add')
@@ -131,7 +134,7 @@ def run_blender_script(script_path, arguments):
         If the Blender script execution fails.
     """
     cmd = [
-        "blender36",
+        "blender",
         "--background",
         "--python", script_path,
         "--"
@@ -141,7 +144,7 @@ def run_blender_script(script_path, arguments):
 def main():
     print("Step 1: Adding random cubes to the scene...")
     run_blender_script(
-        os.path.join(ROOT, "omni/blender_add_cubes.py"),
+        os.path.join(ROOT, "src/sionna-simulation/blender_add_cubes.py"),
         [
             "--num_cubes", str(args.num_cubes),
             "--input_blend", BLEND_FILE_PATH,
@@ -152,9 +155,9 @@ def main():
     print(f"Added {args.num_cubes} random cubes to the scene")
 
     cmd = [
-        "blender36",
+        "blender",
         "--python-expr", "import bpy; bpy.context.scene.render.engine = 'CYCLES'",
-        "--python", os.path.join(ROOT, "omni/save_to_mitsuba.py"),
+        "--python", os.path.join(ROOT, "src/sionna-simulation/save_to_mitsuba.py"),
         "--",
         "--input_blend", OUTPUT_BLEND_PATH,
         "--output_mitsuba", OUTPUT_MITSUBA_PATH
@@ -167,7 +170,7 @@ def main():
 
     print("Step 2: Computing coverage maps...")
     subprocess.run([
-        "python", os.path.join(ROOT, "omni/sionna_coverage_map.py"),
+        "/home/sionna/sionna_env/bin/python", os.path.join(ROOT, "src/sionna-simulation/sionna_coverage_map.py"),
         "--mitsuba_file", OUTPUT_MITSUBA_PATH,
         "--transmitter_file", TRANSMITTER_FILE,
         "--output_dir", ROOT
@@ -178,19 +181,19 @@ def main():
     print("Step 3: Adding coverage maps to the scene...")
     if args.coverage_type == 'individual':
         run_blender_script(
-            os.path.join(ROOT, "omni/blender_add_heatmaps.py"),
+            os.path.join(ROOT, "src/sionna-simulation/blender_add_heatmaps.py"),
             ["--num_planes", transmitters, "--output_blend", OUTPUT_BLEND_PATH]
         )
     else:  
         run_blender_script(
-            os.path.join(ROOT, "omni/blender_add_single_coverage_map.py"),
+            os.path.join(ROOT, "src/sionna-simulation/blender_add_single_coverage_map.py"),
             ["--input_blend", OUTPUT_BLEND_PATH, 
             "--image_path", os.path.join(ROOT, "sionna_coverage_full_map.png")]
         )
 
     print("Step 4: Creating 3D mesh from heatmap...")
     run_blender_script(
-        os.path.join(ROOT, "omni/blender_add_3d_heatmap.py"),  
+        os.path.join(ROOT, "src/sionna-simulation/blender_add_3d_heatmap.py"),  
         [
             "--input_blend", OUTPUT_BLEND_PATH, 
             "--output_file", OUTPUT_BLEND_PATH_3D, 
@@ -200,7 +203,7 @@ def main():
 
     print("Step 5: Saving the final scene to USD")
     run_blender_script(
-        os.path.join(ROOT, "omni/convert_to_usd.py"),  
+        os.path.join(ROOT, "src/sionna-simulation/convert_to_usd.py"),  
         [
             "--input_blend", OUTPUT_BLEND_PATH_3D, 
             "--output_file", OUTPUT_USD_PATH_3D, 
@@ -209,7 +212,7 @@ def main():
 
     print("Step 6: Saving the final scene to GLB")
     run_blender_script(
-        os.path.join(ROOT, "omni/convert_to_glb.py"),  
+        os.path.join(ROOT, "src/sionna-simulation/convert_to_glb.py"),  
         [
             "--input_blend", OUTPUT_BLEND_PATH_3D, 
             "--output_file", OUTPUT_GLB_PATH_3D, 
