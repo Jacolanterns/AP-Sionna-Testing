@@ -31,7 +31,7 @@ ROOT = "/home/sionna/Documents/GitTest2/AP-Sionna-Testing"
 
 # Updated file paths to match project structure
 BLEND_FILE_PATH = os.path.join(ROOT, "data/blender/2F_no_solid.blend")
-TRANSMITTER_FILE = os.path.join(ROOT, "src/sionna/data/transformed_data.csv")  # Updated location
+TRANSMITTER_FILE = os.path.join(ROOT, "data/transformed_data.csv")  # Updated location /home/sionna/Documents/GitTest2/AP-Sionna-Testing/transformed_data.csv
 MITSUBA_FILE_PATH = os.path.join(ROOT, "data/blender/2F_no_solid.xml")
 OUTPUT_BLEND_PATH = os.path.join(ROOT, "output_scene.blend")
 OUTPUT_MITSUBA_PATH = os.path.join(ROOT, "output_scene.xml")

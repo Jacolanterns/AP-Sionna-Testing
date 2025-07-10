@@ -169,15 +169,17 @@ if __name__ == "__main__":
     # Load transmitters from the provided CSV file
     transmitters = load_transmitters(args.transmitter_file)
     for name, position in transmitters:
-        tx = Transmitter(name=name, position=position)
+        # Replace periods with underscores to avoid Mitsuba naming conflicts
+        clean_name = name.replace('.', '_')
+        tx = Transmitter(name=clean_name, position=position)
         sionna_scene.add(tx)
     
     # Define the transmitter and receiver arrays
     sionna_scene.tx_array = PlanarArray(num_rows=4, num_cols=1, vertical_spacing=0.05, horizontal_spacing=0.05, pattern="iso", polarization="VH")
     sionna_scene.rx_array = PlanarArray(num_rows=1, num_cols=1, vertical_spacing=0.5, horizontal_spacing=0.5, pattern="dipole", polarization="VH")
     
-    # Compute the coverage map
-    cm = sionna_scene.coverage_map(max_depth=8)
+    # Compute the coverage map with reduced memory usage
+    cm = sionna_scene.coverage_map(max_depth=3, cm_cell_size=[2.0, 2.0], num_samples=int(5e4))
 
     # Ensure the output directory exists
     os.makedirs(args.output_dir, exist_ok=True)
